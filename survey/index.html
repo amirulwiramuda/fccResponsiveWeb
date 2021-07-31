@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC test 2 Survey</title>
+</head>
+<body>
+    <h1 id="title">This is a Title</h1>
+    <p id="description">This is a Description</p>
+    <form id="survey-form">
+        <label id="name" for="name">Name: </label>
+        <input type="text" name="name" id="name-label" placeholder="Enter Your Name" required>
+        <label id="email" for="email">E-mail: </label>
+        <input type="text" name="email" id="email-label" placeholder="Enter Your E-mail" required>
+        <label for="age" for="age">Age <span>Optional</span></label>
+        <input type="number" name="number" id="number-label" min="10" max="70" placeholder="Age">
+        <p>Dropdown</p>
+        <select name="dropdown" id="dropdown" required>
+            <option disabled>Disabled Option</option>
+            <option value="opt1">Option 1</option>
+            <option value="opt2">Option 2</option>
+            <option value="opt3">Option 3</option>
+        </select>
+        <p>Radio</p>
+        <label><input type="radio" name="radio" value="radio1" checked> Radio 1</label>
+        <label><input type="radio" name="radio" value="radio2"> Radio 2</label>
+        <label><input type="radio" name="radio" value="radio3"> Radio 3</label>
+        <p>Checkbox</p>
+        <label><input type="checkbox" name="checkbox" value="check1">Check 1</label>
+        <label><input type="checkbox" name="checkbox" value="check2">Check 2</label>
+        <label><input type="checkbox" name="checkbox" value="check3">Check 3</label>
+        <label><input type="checkbox" name="checkbox" value="check4">Check 4</label>
+        <label><input type="checkbox" name="checkbox" value="check5">Check 5</label>
+        <p>Textarea</p>
+        <textarea name="textarea" cols="30" rows="10" placeholder="Write Here..."></textarea>
+        <button type="submit">Submit</button>
+        
+    </form>
+</body>
+</html>
