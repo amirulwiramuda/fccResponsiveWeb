@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Technical Documentation</title>
+</head>
+<body>
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <header><a class="navbar-brand" href="#main-doc">Cisco R&S Configuration</a></header>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://amirulwiramuda.github.io/tesip/" target="_blank">IP Calculator</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Configs
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#router">Router</a></li>
+                  <li><a class="dropdown-item" href="#switch">Switch</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#asa">ASA</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <main id="main-doc">
+        <section id="left-nav">
+            <ul id="nav-list">
+                <a href="#introduction"><li>introduction</li></a>
+                <a href="#router"><li>Router</li></a>
+                <a href="#switch"><li>Switch</li></a>
+                <a href="#asa"><li>ASA</li></a>
+                <a href="#routing"><li>Routing</li></a>
+                <a href="#switching"><li>Switching</li></a>
+                <a href="#vlan"><li>VLAN</li></a>
+                <a href="#JavaScript_and_Java">JavaScript and Java</a>
+            </ul>
+
+        </section>
+          <section id="introduction" class="main-section">
+              <header><h1>introduction</h1></header>
+              <p>
+                This document describes how to use the Cisco Configuration Professional (Cisco CP) and Javascript and Java in order to set the basic configuration of the router. Basic configuration of the router includes configuration of the IP address, default routing, static and dynamic routing, static and dynamic NATing, host name, banner, secret password, user accounts, and other options. Cisco CP allows you to configure your router in several network environments, such as small office home office (SOHO), branch office (BO), regional office, and central site or Enterprise headquarters, with an easy-to-use web-based management interface.
+                For more information about Cisco Configuration Professional, refer to Cisco Configuration Professional Quick Start Guide.</p>
+                <p>This document explains how to start using Cisco Configuration Professional Express (Cisco CP Express) and Cisco Configuration Professional (Cisco CP).
+
+                    Cisco Configuration Professional (Cisco CP) is a GUI based device management tool for Cisco access routers. This tool simplifies routing, firewall, IPS, VPN, unified communications, WAN and LAN configuration through GUI based easy-to-use wizards.
+                    
+                    Cisco CP is a valuable productivity enhancing tool for network administrators and channel partners for deploying routers with increased confidence and ease. It offers a one-click router lockdown and an innovative voice and security auditing capability to check and recommend changes to router configuration. Cisco CP also monitors router status and troubleshoots WAN and VPN connectivity issues.
+                    
+                    Cisco CP Express is a light weight version of Cisco CP. You can use Cisco CP Express to configure basic security features on the router's LAN and WAN interfaces. Cisco CP Express is available on the router Flash memory.
+                    
+                    This document shows you how to set up a PC to connect to the router, give the router an initial network configuration using Cisco CP Express, and then begin using Cisco CP.
+                    
+                    This document is intended for users with one of the ordering options (SKU) listed in Table 1, and for users who download these configuration tools from Cisco.com. Refer to the Release Notes for Cisco Configuration Professional for information about supported routers, web browsers, and plug-ins.
+                    
+                    Cisco CP ordering options are provided to suit a variety of deployments. Table 1 describes the Cisco CP ordering options, the deployment each supports, and how this document can be used.</p>
+          </section>
+          <section id="router" class="main-section">
+            <header><h1>Router</h1></header>
+            <p>Seamlessly and securely connect applications across your cloud, data center, and edge locations. Designed for intent-based networking, the new Catalyst 8000 Edge Platforms Family transforms the WAN edge by delivering the best of SD-WAN, security, edge compute and 5G-ready connectivity.</p>
+            <strong><p>Routers</p></strong>
+            <ul id="sw-list">
+                <a href="https://www.cisco.com/c/en/us/products/routers/900-series-integrated-services-routers-isr/index.html" target="_blank"><li>ISR 900</li></a>
+                <a href="https://www.cisco.com/c/en/us/products/routers/1000-series-integrated-services-routers-isr/index.html" target="_blank"><li>ISR 1000</li></a>
+                <a href="https://www.cisco.com/c/en/us/products/routers/network-convergence-system-500-series-routers/index.html" target="_blank"><li>NCS 500</li></a>
+                <a href="https://www.cisco.com/c/en/us/products/routers/network-convergence-system-5000-series/index.html" target="_blank"><li>NCS 5000</li></a>
+                <a href="https://www.cisco.com/c/en/us/products/routers/1941-integrated-services-router-isr/index.html" target="_blank"><li>ISR 1941</li></a>
+                <a href="https://www.cisco.com/c/en/us/support/routers/2911-integrated-services-router-isr/model.html" target="_blank"><li>ISR 2911</li></a>
+            </ul>
+                  <P><strong>Example Router Configuration</strong></P>
+                  <code>
+                    <pre>Router#<strong>show run</strong>
+                        Building configuration...
+                        Current configuration : 2525 bytes
+                        <em>
+                        !
+                        </em>
+                        version 12.4
+                        service timestamps debug datetime msec
+                        service timestamps log datetime msec
+                        no service password-encryption
+                        <em>
+                        !
+                        </em>
+                        hostname Router
+                        <em>
+                        !
+                        </em>
+                        boot-start-marker
+                        boot-end-marker
+                        <em>
+                        !
+                        </em>
+                        no logging buffered
+                        enable password cisco
+                        <em>
+                        !
+                        </em>
+                        no aaa new-model
+                        <em>
+                        !
+                        </em>
+                        resource policy
+                        <em>
+                        ! ! !
+                        </em>
+                        ip cef
+                        <em>
+                        ! ! !
+                        </em>
+                        <em>
+                        !--- RSA certificate generated after you enable the !--- <strong>ip http secure-server</strong> command.
+                        </em>
+                        crypto pki trustpoint TP-self-signed-2401602417
+                         enrollment selfsigned
+                         subject-name cn=IOS-Self-Signed-Certificate-2401602417
+                         revocation-check none
+                         rsakeypair TP-self-signed-2401602417
+                        crypto pki certificate chain TP-self-signed-2401602417
+                         certificate self-signed 01
+                         30820248 308201B1 A0030201 02020101 300D0609 2A864886 F70D0101 04050030
+                         31312F30 2D060355 04031326 494F532D 53656C66 2D536967 6E65642D 43657274
+                         69666963 6174652D 32343031 36303234 3137301E 170D3130 30353139 30393031
+                         31315A17 0D323030 31303130 30303030 305A3031 312F302D 06035504 03132649
+                         4F532D53 656C662D 5369676E 65642D43 65727469 66696361 74652D32 34303136
+                         30323431 3730819F 300D0609 2A864886 F70D0101 01050003 818D0030 81890281
+                         8100CD35 A3A6E322 9B6005DA A0FF26C2 8A0DC5AF 27B38F3B DBF2BF58 D8F2655D
+                         31115681 EC8BC750 03FE3A25 0F79DC74 3A839496 CB9486F1 A1F5BF43 D92BA7AF
+                         3C72A57B D8D37799 50493588 A5A18F7F 27955AB0 AC36B560 3BE9F648 A4F6F41F
+                         B9E9C5E6 F9570DEB 5555FDED 9593BD00 5ABB30CD D3B9BDFA F570F987 651652CE
+                         3D310203 010001A3 70306E30 0F060355 1D130101 FF040530 030101FF 301B0603
+                         551D1104 14301282 10526F75 7465722E 70616D6D 692E636F 6D301F06 03551D23
+                         04183016 80146A0A C2100122 EFDA58AB C319820D 98256622 52C5301D 0603551D
+                         0E041604 146A0AC2 100122EF DA58ABC3 19820D98 25662252 C5300D06 092A8648
+                         86F70D01 01040500 03818100 83B0EC8C 6916178F 587E15D6 5485A043 E7BB258D
+                         0C9A63F2 DA18793D CACC026E BC0B9B33 F8A27B34 5BD7DD7F FCECA34F 04662AEC
+                         07FD7677 A90A8D1C 49042963 C2562FEC 4EFFF17C 360BF88A FEDC7CAA AE308F6C
+                         A5756C4A F574F5F3 39CE14AE BAAEC655 D5920DD0 DA76E296 B246E36E 16CFBC5A
+                         00974370 170BBDAD C1594013
+                         quit
+                        <em>
+                        ! ! ! ! ! ! ! ! !--- Create a user account named <strong>ccpccp</strong> with all privileges.
+                        </em>
+                        username ccpccp privilege 15 password 0 cisco123
+                        archive
+                         log config
+                         hidekeys
+                        <em>
+                        ! ! ! ! ! ! !--- The LAN interface configured with a private IP address.
+                        </em>
+                        interface FastEthernet0/0
+                         description $ETH-LAN$
+                         ip address 192.168.1.1 255.255.255.0
+                        <em>
+                        !--- Designate that traffic that originates from behind !--- the interface is subject to Network Address Translation (NAT).
+                        </em>
+                        <strong> ip nat inside</strong>
+                         ip virtual-reassembly
+                         duplex auto
+                         speed auto
+                        <em>
+                        ! !--- This is the LAN interface configured with a routable (public) IP address.
+                        </em>
+                        interface FastEthernet0/1
+                         description $ETH-WAN$
+                         ip address 172.16.1.1 255.255.255.0
+                         <em>
+                        !--- Designate that this interface is the !--- destination for traffic that has undergone NAT.
+                        </em>
+                        <strong>ip nat outside</strong>
+                         ip virtual-reassembly
+                        duplex auto
+                         speed auto
+                        <em>
+                        ! ! !--- RIP version 2 routing is enabled. 
+                        </em>
+                        router rip
+                         version 2
+                         network 192.168.1.0
+                         no auto-summary
+                        <em>
+                        !--- This is where the commands to enable HTTP and HTTPS are configured.
+                        </em>
+                        ip http server
+                        ip http authentication local
+                        ip http secure-server
+                        <em>
+                        !<strong> !--- This configuration is for dynamic NAT.</strong> !
+                        </em>
+                        <em>
+                        !--- Define a pool of outside IP addresses for NAT.
+                        </em>
+                        ip nat pool pool 10.10.10.1 10.10.10.100 netmask 255.255.255.0
+                        <em>
+                        !--- In order to enable NAT of the inside source address, !--- specify that traffic from hosts that match access list 1 !--- are NATed to the address pool named pool1.
+                        </em>
+                        ip nat inside source list 1 pool pool1
+                        <em>
+                        ! !--- Access list 1 permits only 122.168.1.0 network to be NATed.
+                        </em>
+                        access-list 1 remark CCP_ACL Category=2
+                        access-list 1 permit 192.168.1.0 0.0.0.255
+                        <em>
+                        ! <strong>!--- This configuration is for static NAT</strong> !--- In order to translate the packets between the real IP address 10.10.10.1 with TCP !--- port 80 and the mapped IP address 172.16.1.1 with TCP port 500. !
+                        </em>
+                        <strong>ip nat outside source static tcp 10.10.10.1 8080 172.16.1.1 80 extendable</strong>
+                        <em>
+                        ! !
+                        </em>
+                        <em>
+                        ! ! !--- The default route is configured and points to 172.16.1.2.
+                        </em>
+                        ip route 0.0.0.0 0.0.0.0 172.16.1.2
+                        <em>
+                        ! ! ! !
+                        </em>
+                        control-plane
+                        <em>
+                        ! ! ! ! ! ! ! ! ! !
+                        </em>a
+                        line con 0
+                        line aux 0
+                        <em>
+                        !--- Telnet enabled with password as cisco.
+                        </em>
+                        line vty 0 4
+                         password cisco
+                         transport input all
+                        line vty 5 15
+                         password cisco
+                         transport input all
+                        <em>
+                        ! ! !
+                        </em>
+                        end</pre>
+                  </code>
+        </section>
+        <section id="switch" class="main-section">
+            <header><h1>Switch</h1></header>
+            <p>Our switches are constantly learning, constantly adapting, constantly protecting. Build a foundation for extraordinary outcomes at your data center, core, or edge. This is the new era in intent-based networking.</p>
+            <strong><p>Switches</p></strong>
+            <ul id="sw-list">
+                <a href="https://www.cisco.com/c/en/us/products/wireless/catalyst-9800-series-wireless-controllers/index.html" target="_blank"><li>Catalyst 9800</li></a>
+                <a href="https://www.cisco.com/c/en/us/products/switches/catalyst-9600-series-switches/index.html" target="_blank"><li>Catalyst 9600</li></a>
+                <a href="https://www.cisco.com/c/en/us/products/switches/catalyst-9500-series-switches/index.html" target="_blank"><li>Catalyst 9500</li></a>
+                <a href="https://www.cisco.com/c/en/us/products/switches/catalyst-9400-series-switches/index.html" target="_blank"><li>Catalyst 9400</li></a>
+                <a href="https://www.cisco.com/c/en/us/products/switches/catalyst-9300-series-switches/index.html" target="_blank"><li>Catalyst 9300</li></a>
+                <a href="https://www.cisco.com/c/en/us/support/switches/catalyst-2960-x-series-switches/series.html" target="_blank"><li>Catalyst 2960</li></a>
+            </ul>
+            <strong><p>Example Switch Configuration</p></strong>
+            <code><pre>S1-Access(config)#do sh run</pre>
+                <p>Building configuration...</p>
+                <p>Current configuration : 1211 bytes</p>
+                <p>!</p>
+                <p>version 15.0</p>
+                <p>no service timestamps log datetime msec</p>
+                <p>no service timestamps debug datetime msec</p>
+                <p>service password-encryption</p>
+                <p>!</p>
+                <p>hostname S1-Access</p>
+                <p>!</p>
+                <p>enable secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0</p>
+                <p>!</p>
+                <p>!</p>
+                <p>!</p>
+                <p>!</p>
+                <p>!</p>
+                <p>!</p>
+                <p>spanning-tree mode pvst</p>
+                <p>spanning-tree extend system-id</p>
+                <p>!</p>
+                <p>interface FastEthernet0/1</p>
+                <p>!</p>
+                <p>interface FastEthernet0/2</p>
+                <p>!</p>
+                <p>interface FastEthernet0/3</p>
+                <p>!</p>
+                <p>interface FastEthernet0/4</p>
+                <p>!</p>
+                <p>interface FastEthernet0/5</p>
+                <p>!</p>
+                <p>interface FastEthernet0/6</p>
+                <p>!</p>
+                <p>interface FastEthernet0/7</p>
+                <p>!</p>
+                <p>interface FastEthernet0/8</p>
+                <p>!</p>
+                <p>interface FastEthernet0/9</p>
+                <p>!</p>
+                <p>interface FastEthernet0/10</p>
+                <p>!</p>
+                <p>interface FastEthernet0/11</p>
+                <p>!</p>
+                <p>interface FastEthernet0/12</p>
+                <p>!</p>
+                <p>interface FastEthernet0/13</p>
+                <p>!</p>
+                <p>interface FastEthernet0/14</p>
+                <p>!</p>
+                <p>interface FastEthernet0/15</p>
+                <p>!</p>
+                <p>interface FastEthernet0/16</p>
+                <p>!</p>
+                <p>interface FastEthernet0/17</p>
+                <p>!</p>
+                <p>interface FastEthernet0/18</p>
+                <p>!</p>
+                <p>interface FastEthernet0/19</p>
+                <p>!</p>
+                <p>interface FastEthernet0/20</p>
+                <p>!</p>
+                <p>interface FastEthernet0/21</p>
+                <p>!</p>
+                <p>interface FastEthernet0/22</p>
+                <p>!</p>
+                <p>interface FastEthernet0/23</p>
+                <p>!</p>
+                <p>interface FastEthernet0/24</p>
+                <p>!</p>
+                <p>interface GigabitEthernet0/1</p>
+                <p>!</p>
+                <p>interface GigabitEthernet0/2</p>
+                <p>!</p>
+                <p>interface Vlan1</p>
+                <p>no ip address</p>
+                <p>shutdown</p>
+                <p>!</p>
+                <p>!</p>
+                <p>!</p>
+                <p>!</p>
+                <p>line con 0</p>
+                <p>password 7 0822455D0A16</p>
+                <p>login</p>
+                <p>!</p>
+                <p>line vty 0 4</p>
+                <p>password 7 0822455D0A16</p>
+                <p>login</p>
+                <p>line vty 5 15</p>
+                <p>password 7 0822455D0A16</p>
+                <p>login</p>
+                <p>!</p>
+                <p>!</p>
+                <p>!</p>
+                <p>!</p>
+                <p>end</p></code>
+        </section>
+        <section id="asa" class="main-section">
+            <header><h1>ASA</h1></header>
+            <p>Cisco Adaptive Security Appliance (ASA) Software</p>
+            <p>Proven Firewall and Network Security Platform
+                The Cisco ASA Family of security devices protects corporate networks and data centers of all sizes. It provides users with highly secure access to data and network resources - anytime, anywhere, using any device. Cisco ASA devices represent more than 15 years of proven firewall and network security engineering and leadership, with more than 1 million security appliances deployed throughout the world.</p>
+                <ul>
+                    <section>
+                    <div>
+                    <div>
+                    <div>
+                    <div>
+                    <h2>Features and Capabilities</h2>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div>
+                    <div>
+                    <div data-config-metrics-group="Responsive Text" data-config-metrics-title="Cisco Adaptive Security Appliance..." data-version="DM:components/text/text:V2.2.0">
+                    <p>Cisco Adaptive Security Appliance (ASA) Software is the core operating system for the Cisco ASA Family. It delivers enterprise-class firewall capabilities for ASA devices in an array of form factors -&nbsp;<a href="https://www.cisco.com/c/en/us/products/security/asa-firepower-services/index.html">standalone appliances</a>,&nbsp;<a href="https://www.cisco.com/c/en/us/products/interfaces-modules/catalyst-6500-series-7600-series-asa-services-module/index.html">blades</a>, and&nbsp;<a href="https://www.cisco.com/c/en/us/products/security/asa-1000v-cloud-firewall/index.html">virtual appliances</a>&nbsp;- for any distributed network environment. ASA Software also integrates with other critical security technologies to deliver comprehensive solutions that meet continuously evolving security needs.</p>
+                    <p>Among its benefits, Cisco ASA Software:</p>
+                    <ul>
+                    <li>Offers integrated&nbsp;<a href="https://www.cisco.com/c/en/us/products/security/ngips/index.html">IPS</a>,&nbsp;<a href="https://www.cisco.com/c/en/us/products/security/anyconnect-secure-mobility-client/index.html">VPN</a>, and Unified Communications capabilities</li>
+                    <li>Helps organizations increase capacity and improve performance through high-performance, multi-site, multi-node clustering</li>
+                    <li>Delivers high availability for high resiliency applications</li>
+                    <li>Provides collaboration between physical and virtual devices</li>
+                    <li>Meets the unique needs of both the network and the data center</li>
+                    <li>Provides context awareness with&nbsp;<a href="https://www.cisco.com/c/en/us/solutions/enterprise-networks/trustsec/index.html">Cisco TrustSec</a>&nbsp;security group tags and&nbsp;<a href="https://www.cisco.com/c/dam/en/us/products/collateral/security/asa-5500-series-next-generation-firewalls/at_a_glance_c45-675579.pdf" target="_blank">identity-based firewall</a>&nbsp;technology</li>
+                    <li>Facilitates dynamic routing and site-to-site VPN on a per-context basis</li>
+                    </ul>
+                    <p>Cisco ASA software also supports next-generation encryption standards, including the Suite B set of cryptographic algorithms. It also integrates with the&nbsp;<a href="https://www.cisco.com/c/en/us/products/security/cloud-web-security/index.html">Cisco Cloud Web Security</a>&nbsp;solution to provide world-class, web-based threat protection.</p>
+                    </div>
+                    </div>
+                    </div>
+                    </section>
+                    </ul>
+        </section>
+        <section id="routing" class="main-section">
+            <header><h1>Routing</h1></header>
+            <p>Routing is the process of selecting a path for traffic in a network or between or across multiple networks. Broadly, routing is performed in many types of networks, including circuit-switched networks, such as the public switched telephone network (PSTN), and computer networks, such as the Internet.
+
+                In packet switching networks, routing is the higher-level decision making that directs network packets from their source toward their destination through intermediate network nodes by specific packet forwarding mechanisms. Packet forwarding is the transit of network packets from one network interface to another. Intermediate nodes are typically network hardware devices such as routers, gateways, firewalls, or switches. General-purpose computers also forward packets and perform routing, although they have no specially optimized hardware for the task.
+                
+                The routing process usually directs forwarding on the basis of routing tables. Routing tables maintain a record of the routes to various network destinations. Routing tables may be specified by an administrator, learned by observing network traffic or built with the assistance of routing protocols.
+                
+                Routing, in a narrower sense of the term, often refers to IP routing and is contrasted with bridging. IP routing assumes that network addresses are structured and that similar addresses imply proximity within the network. Structured addresses allow a single routing table entry to represent the route to a group of devices. In large networks, structured addressing (routing, in the narrow sense) outperforms unstructured addressing (bridging). Routing has become the dominant form of addressing on the Internet. Bridging is still widely used within local area networks.</p>
+
+                <strong><p>Example OSPF Routing</p></strong>
+                <code>
+                    <ul>
+                        <li>
+                        <section>
+                        <p>Following is the sample configuration for the general network map shown in the figure above.</p>
+                        </section>
+                        <section>
+                        <h5>Router A Configuration&mdash;Internal Router</h5>
+                        <pre>interface ethernet 1
+                         ip address 192.168.1.1 255.255.255.0
+                        router ospf 1
+                         network 192.168.0.0 0.0.255.255 area 1</pre>
+                        </section>
+                        <section>
+                        <h5>Router B Configuration&mdash;Internal Router</h5>
+                        <pre>interface ethernet 2
+                         ip address 192.168.1.2 255.255.255.0
+                        router ospf 202
+                         network 192.168.0.0 0.0.255.255 area 1</pre>
+                        </section>
+                        <section>
+                        <h5>Router C Configuration&mdash;ABR</h5>
+                        <pre>interface ethernet 3
+                         ip address 192.168.1.3 255.255.255.0
+                        interface serial 0
+                         ip address 192.168.2.3 255.255.255.0
+                        router ospf 999
+                         network 192.168.1.0 0.0.0.255 area 1
+                         network 192.168.2.0 0.0.0.255 area 0</pre>
+                        </section>
+                        <section>
+                        <h5>Router D Configuration&mdash;Internal Router</h5>
+                        <pre>interface ethernet 4
+                         ip address 10.0.0.4 255.0.0.0
+                        interface serial 1
+                         ip address 192.168.2.4 255.255.255.0
+                        router ospf 50
+                         network 192.168.2.0 0.0.0.255 area 0
+                         network 10.0.0.0 0.255.255.255 area 0</pre>
+                        </section>
+                        </li>
+                        </ul>
+                </code>
+        </section>
+        <section id="switching" class="main-section">
+            <header><h1>Switching</h1></header>
+            <p>A network switch (also called switching hub, bridging hub, and, by the IEEE, MAC bridge[1]) is networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device.
+
+                A network switch is a multiport network bridge that uses MAC addresses to forward data at the data link layer (layer 2) of the OSI model. Some switches can also forward data at the network layer (layer 3) by additionally incorporating routing functionality. Such switches are commonly known as layer-3 switches or multilayer switches.[2]
+                
+                Switches for Ethernet are the most common form of network switch. The first Ethernet switch was introduced by Kalpana in 1990.[3] Switches also exist for other types of networks including Fibre Channel, Asynchronous Transfer Mode, and InfiniBand.
+                
+                Unlike repeater hubs, which broadcast the same data out of each port and let the devices pick out the data addressed to them, a network switch learns the identities of connected devices and then only forwards data to the port connected to the device to which it is addressed.[4]</p>
+                <h2>Switching Example</h2>
+                <strong><p>This example shows how to configure an EtherChannel on a single switch in the stack. It assigns two ports as static-access ports in VLAN 10 to channel 5 with the PAgP mode&nbsp;<strong>desirable</strong>&nbsp;:</p></strong>
+                <code>
+                    <section>Switch#&nbsp;configure terminal</section>
+                        <section>Switch(config)#&nbsp;interface range gigabitethernet2/0/1 -2</section>
+                        <section>Switch(config-if-range)#&nbsp;switchport mode access</section>
+                        <section>Switch(config-if-range)#&nbsp;switchport access vlan 10</section>
+                        <section>Switch(config-if-range)#&nbsp;channel-group 5 mode desirable non-silent</section>
+                        <section>Switch(config-if-range)#&nbsp;end</section>
+                        <section>&nbsp;</section>
+                </code>
+
+                <strong><p><p>This example shows how to configure an EtherChannel on a single switch in the stack. It assigns two ports as static-access ports in VLAN 10 to channel 5 with the LACP mode&nbsp;<strong>active</strong>&nbsp;:</p></p></strong>
+                <code>
+                    <section>Switch#&nbsp;configure terminal</section>
+                    <section>Switch(config)#&nbsp;interface range gigabitethernet2/0/1 -2</section>
+                    <section>Switch(config-if-range)#&nbsp;switchport mode access</section>
+                    <section>Switch(config-if-range)#&nbsp;switchport access vlan 10</section>
+                    <section>Switch(config-if-range)#&nbsp;channel-group 5 mode active</section>
+                    <section>Switch(config-if-range)#&nbsp;end</section>
+                    <section>&nbsp;</section>
+                </code>
+                <strong><p>This example shows how to configure a cross-stack EtherChannel. It uses LACP passive mode and assigns two ports on stack member 2 and one port on stack member 3 as static-access ports in VLAN 10 to channel 5:</p></strong>
+                <code>
+                        <section>Switch#&nbsp;configure terminal</section>
+                        <section>Switch(config)#&nbsp;interface range gigabitethernet2/0/4 -5</section>
+                        <section>Switch(config-if-range)#&nbsp;switchport mode access</section>
+                        <section>Switch(config-if-range)#&nbsp;switchport access vlan 10</section>
+                        <section>Switch(config-if-range)#&nbsp;channel-group 5 mode active</section>
+                        <section>Switch(config-if-range)#&nbsp;exit</section>
+                        <section>Switch(config)#&nbsp;interface gigabitethernet3/0/3</section>
+                        <section>Switch(config-if)#&nbsp;switchport mode access</section>
+                        <section>Switch(config-if)#&nbsp;switchport access vlan 10</section>
+                        <section>Switch(config-if)#&nbsp;channel-group 5 mode active</section>
+                        <section>Switch(config-if)#&nbsp;exit</section>
+                </code>
+        </section>
+        <section id="vlan" class="main-section">
+            <header><h1>Vlan</h1></header>
+            <p>A virtual LAN (VLAN) is any broadcast domain that is partitioned and isolated in a computer network at the data link layer (OSI layer 2).[1][2] LAN is the abbreviation for local area network and in this context virtual refers to a physical object recreated and altered by additional logic. VLANs work by applying tags to network frames and handling these tags in networking systems – creating the appearance and functionality of network traffic that is physically on a single network but acts as if it is split between separate networks. In this way, VLANs can keep network applications separate despite being connected to the same physical network, and without requiring multiple sets of cabling and networking devices to be deployed.
+
+                VLANs allow network administrators to group hosts together even if the hosts are not directly connected to the same network switch. Because VLAN membership can be configured through software, this can greatly simplify network design and deployment. Without VLANs, grouping hosts according to their resource needs the labor of relocating nodes or rewiring data links. VLANs allow devices that must be kept separate to share the cabling of a physical network and yet be prevented from directly interacting with one another. This managed sharing yields gains in simplicity, security, traffic management, and economy. For example, a VLAN can be used to separate traffic within a business based on individual users or groups of users or their roles (e.g. network administrators), or based on traffic characteristics (e.g. low-priority traffic prevented from impinging on the rest of the network's functioning). Many Internet hosting services use VLANs to separate customers' private zones from one other, allowing each customer's servers to be grouped in a single network segment no matter where the individual servers are located in the data center. Some precautions are needed to prevent traffic "escaping" from a given VLAN, an exploit known as VLAN hopping.
+                
+                To subdivide a network into VLANs, one configures network equipment. Simpler equipment might partition only each physical port (if even that), in which case each VLAN runs over a dedicated network cable. More sophisticated devices can mark frames through VLAN tagging, so that a single interconnect (trunk) may be used to transport data for multiple VLANs. Since VLANs share bandwidth, a VLAN trunk can use link aggregation, quality-of-service prioritization, or both to route data efficiently.</p>
+        </section>
+        <section id="JavaScript_and_Java" class="main-section">
+            <header><h1>Javascript and Java</h1></header>
+            <h3>Javascript</h3>
+            <p>JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles. Read more about JavaScript.
+
+                This section is dedicated to the JavaScript language itself, and not the parts that are specific to Web pages or other host environments. For information about API specifics to Web pages, please see Web APIs and DOM.
+                
+                The standards for JavaScript are the ECMAScript Language Specification (ECMA-262) and the ECMAScript Internationalization API specification (ECMA-402). The JavaScript documentation throughout MDN is based on the latest draft versions of ECMA-262 and ECMA-402. And in cases where some proposals for new ECMAScript features have already been implemented in browsers, documentation and examples in MDN articles may use some of those new features.
+                
+                Do not confuse JavaScript with the Java programming language. Both "Java" and "JavaScript" are trademarks or registered trademarks of Oracle in the U.S. and other countries. However, the two programming languages have very different syntax, semantics, and use.</p>
+                <strong>
+                    <p>Example Javascript</p>
+                </strong>
+                <code>
+                    <section>
+                        <div>
+                        <div>let&nbsp;seq&nbsp;=&nbsp;10</div>
+                        <div>let&nbsp;fib&nbsp;</div>
+                        <div>let&nbsp;fibA&nbsp;=&nbsp;0</div>
+                        <div>let&nbsp;fibB&nbsp;=&nbsp;1</div>
+                        <br />
+                        <div>/*for&nbsp;(let&nbsp;a&nbsp;=&nbsp;0;&nbsp;a&nbsp;&lt;&nbsp;seq;&nbsp;a++)&nbsp;{</div>
+                        <div>console.log(fibA)</div>
+                        <div>fib&nbsp;=&nbsp;fibA&nbsp;+&nbsp;fibB</div>
+                        <div>fibA&nbsp;=&nbsp;fibB</div>
+                        <div>fibB&nbsp;=&nbsp;fib</div>
+                        <div>}*/</div>
+                        <br />
+                        <div>while&nbsp;(fibA&nbsp;&lt;&nbsp;seq)&nbsp;{</div>
+                        <div>console.log(fibA)</div>
+                        <div>fib&nbsp;=&nbsp;fibA&nbsp;+&nbsp;fibB</div>
+                        <div>fibA&nbsp;=&nbsp;fibB</div>
+                        <div>fibB&nbsp;=&nbsp;fib</div>
+                        <div>}</div>
+                        </div>
+                        </section>
+                </code>
+
+                <h3>Java</h3>
+                <p>Java SE lets you develop and deploy Java applications on desktops and servers. Java SE and component technologies offer the rich user interface, performance, versatility, portability, and security that today's applications require.</p>
+                <p><strong>Java SE Documentation</strong></p>
+                <ul>
+                <li><a href="https://www.oracle.com/technetwork/java/javase/documentation" target="_blank">Java SE Licensing Information</a> Product License, Commercial Features and Terms,&nbsp;<a href="https://www.oracle.com/java/technologies/javase/licensing-user-manual.html" target="_blank">Java SE Licensing Information User Manual (LIUM)</a>, Readme Files, Release Notes, and information on Data Collection</li>
+                <li><a href="https://www.oracle.com/pls/topic/lookup?ctx=en/java/javase&amp;id=javaselatest">Java SE Technical Documentation</a></li>
+                <li><a href="http://docs.oracle.com/javacomponents">Java SE Components Documentation</a></li>
+                <strong><p>Example Java</p></strong>
+                <code>       
+                <section>
+                    <pre><code class="java hljs"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{
+                    
+                    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{
+                    
+                        <span class="hljs-comment">// year to be checked</span>
+                        <span class="hljs-keyword">int</span> year = <span class="hljs-number">1996</span>;
+                        <span class="hljs-keyword">boolean</span> leap = <span class="hljs-keyword">false</span>;
+                    
+                        <span class="hljs-comment">// if the year is divided by 4</span>
+                        <span class="hljs-keyword">if</span> (year % <span class="hljs-number">4</span> == <span class="hljs-number">0</span>) {
+                    
+                        <span class="hljs-comment">// if the year is century</span>
+                        <span class="hljs-keyword">if</span> (year % <span class="hljs-number">100</span> == <span class="hljs-number">0</span>) {
+                    
+                            <span class="hljs-comment">// if year is divided by 400</span>
+                            <span class="hljs-comment">// then it is a leap year</span>
+                            <span class="hljs-keyword">if</span> (year % <span class="hljs-number">400</span> == <span class="hljs-number">0</span>)
+                            leap = <span class="hljs-keyword">true</span>;
+                            <span class="hljs-keyword">else</span>
+                            leap = <span class="hljs-keyword">false</span>;
+                        }
+                        
+                        <span class="hljs-comment">// if the year is not century</span>
+                        <span class="hljs-keyword">else</span>
+                            leap = <span class="hljs-keyword">true</span>;
+                        }
+                        
+                        <span class="hljs-keyword">else</span>
+                        leap = <span class="hljs-keyword">false</span>;
+                    
+                        <span class="hljs-keyword">if</span> (leap)
+                        System.out.println(year + <span class="hljs-string">" is a leap year."</span>);
+                        <span class="hljs-keyword">else</span>
+                        System.out.println(year + <span class="hljs-string">" is not a leap year."</span>);
+                    }
+                    }</code></pre>
+                    </section>
+    
+                </code>
+                </ul>
+        </section>
+      </main>
+
+      <footer id="footer-doc">For Free Code Camp Certification</footer>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
