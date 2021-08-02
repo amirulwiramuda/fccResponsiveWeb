@@ -1,0 +1,34 @@
+ul{
+    list-style-type: none;
+    overflow: hidden;
+}
+li{
+    float: left;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 25px 30px;
+    text-decoration: none;
+  }
+
+li a:hover{
+    background-color: black;
+    color: white;
+}
+  
+a {
+    display: inline;
+    padding: 25px;
+}
+
+img{
+    display: flex;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: beige;
+}
